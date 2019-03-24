@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <link rel="icon" href="resources/favicon/favicon16.png" sizes="16x16">
+    <link rel="icon" href="resources/favicon/favicon32.png" sizes="32x32">
+
+    <title>Rishabh Singhvi</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Rishabh Singhvi: https://github.com/rishabhsinghvi   https://www.linkedin.com/in/rishabhsinghvi2">
+    <meta name="keywords" content="personal website, Rishabh, Singhvi, Rishabh Singhvi">
+    <meta name="description" content="My personal website. Source code available on Github">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index.css">
+</html>
+
+<body>
+    <div id="body-container">
+        <canvas id="canvas" style="width:100%; height:100%">
+            Seriously?
+        </canvas>
+        <span id="text-container">Hi, I'm Rishabh.</span>
+        <script type="text/javascript" src="background.js"></script>
+        <div id="link-container">
+            <a href="https://www.github.com/rishabhsinghvi" target="_blank">
+                <img onmouseover="hover(this);" onmouseout="unhover(this);" src="resources/logos/github-logo.svg" title="Github">
+            </a>
+            <a href="https://www.linkedin.com/in/rishabhsinghvi2" target="_blank">
+                <img onmouseover="hover(this);" onmouseout="unhover(this);" src="resources/logos/linkedin-logo.svg" title="LinkedIn">
+            </a>
+            <a href="https://www.twitter.com/_lieability_" target="_blank">
+                <img onmouseover="hover(this);" onmouseout="unhover(this);" src="resources/logos/twitter-logo.svg" title="Twitter">
+            </a>
+            <a href="/resources/resume.pdf" target="_blank">
+                <img onmouseover="hover(this);" onmouseout="unhover(this);" src="resources/logos/resume-logo.svg" title="Résumé">
+            </a>
+            <a onclick="contactMe()">
+                <img onmouseover="hover(this);" onmouseout="unhover(this);" src="resources/logos/contact-logo.svg" title="Contact Me">
+            </a>
+        </div>
+        <div id="contact-container">
+            <form id="contact-form">
+                <input type="text" placeholder="Name"/><br />
+                <input type="email" placeholder="Email"/><br />
+                <textarea placeholder="Message" ></textarea><br />
+                <button id="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="contact.js"></script>
+    <script>
+
+        // Hacky - change this
+        function hover(el)
+        {
+            var resource_name = el.getAttribute('src')
+            resource_name = resource_name.split('.')[0]+"-hover.svg"
+            el.setAttribute('src',resource_name)
+        }
+
+        function unhover(el)
+        {
+            var resource_name = el.getAttribute('src')
+            resource_name = resource_name.split('-')[0] +"-"+ resource_name.split('-')[1] + ".svg"
+            el.setAttribute('src', resource_name)
+        }
+    </script>
+</body>
