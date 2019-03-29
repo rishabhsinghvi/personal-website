@@ -1,9 +1,30 @@
-const NUM_PARTICLES = 300;
 const FRAMES_PER_SEC = 30;
 const FILL_STYLE = "#0d203f"
 
+function detectBrowser()
+{
+    var sUsrAg = navigator.userAgent;
+
+if (sUsrAg.indexOf("Firefox") > -1) {
+return 50;
+} else if (sUsrAg.indexOf("Opera") > -1 || sUsrAg.indexOf("OPR") > -1) {
+    return  50;
+} else if (sUsrAg.indexOf("Trident") > -1) {
+    return 50;
+} else if (sUsrAg.indexOf("Edge") > -1) {
+    return 50;
+} else if (sUsrAg.indexOf("Chrome") > -1) {
+    return 250;
+} else if (sUsrAg.indexOf("Safari") > -1) {
+    return 50;} else {
+        return 50;
+}
+}
+NUM_PARTICLES = detectBrowser();
+
 function init()
 {
+    
     canvas = document.getElementById('canvas')
     context = canvas.getContext('2d')
     var dpi = window.devicePixelRatio
@@ -37,6 +58,7 @@ class Particle
 
     constructor()
     {    
+        
         this.vy = 5;
         this.vx = Math.floor(Math.random()*2)-1
         this.px = Math.floor(Math.random() * canvas.width);
@@ -109,6 +131,8 @@ function clearCanvas()
     context.fillStyle = "rgba(0,0,0,0)";
     context.clearRect(0,0,canvas.width, canvas.height)
 
+    //context.fillStyle = "#3a4660" 
+    //context.fillStyle = "#7dce94" //greenish
     context.fillStyle = FILL_STYLE
     context.fillRect(0,0,canvas.width, canvas.height)
 }
