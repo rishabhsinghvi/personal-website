@@ -6,4 +6,3 @@ app = Flask(__name__, static_url_path='/static')
 def index():
     return current_app.send_static_file('index.html')
 
-
