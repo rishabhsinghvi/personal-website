@@ -50,15 +50,4 @@ html, body {
     top: 65vh;
   }
 
-  @keyframes scroll {
-    0% {
-      transform: translateY(0);
-    }
-    30% {
-      transform: translateY(15px);
-    }
-  }
   
-  img #wheel {
-    animation: scroll ease 2s infinite;
-  }

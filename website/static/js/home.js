@@ -36,9 +36,4 @@ anime.timeline()
       duration: 2000
     });
 
-
-function hover(el)
-    {}
-
-function unhover(el)
-    {}
+    
