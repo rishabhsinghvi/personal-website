@@ -1,14 +1,19 @@
 html, body {
     height: 100%;
+    background-color: #efea62;
+    background-color: #4eafd7;
+    background-color: #ceca5a;
+    overflow:  hidden;
 }
 
 
 .text-intro {
     position: relative;
     font-weight: 900;
-    font-size: 3.3em;
-    top: 32vh;
+    font-size: 4em;
+    top: 25vh;
     font-family: 'Neucha', cursive;
+    color: #ffffff;
   }
   
   .text-intro .text-wrapper {
@@ -23,4 +28,37 @@ html, body {
   .text-intro .letter {
     display: inline-block;
     line-height: 1em;
+  }
+
+  .link-container{
+    position:relative;
+    top: 35vh;
+  }
+  
+  .ext_link {
+    position: relative;
+    display: inline-block;
+  }
+
+  .link-container a{
+    margin: 20px;
+    text-decoration: none;
+  }
+
+  .scrolldown-container{
+    position:relative;
+    top: 65vh;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateY(0);
+    }
+    30% {
+      transform: translateY(15px);
+    }
+  }
+  
+  img #wheel {
+    animation: scroll ease 2s infinite;
   }
