@@ -1,8 +1,11 @@
 from website import app
+from flask import render_template
 
 
 @app.route('/')
+@app.route('/index')
+@app.route('/index.html')
 def index():
-    return current_app.send_static_file('index.html')
+    return render_template('index.html')
 
 
