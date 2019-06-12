@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from website import utils
 from flask_mail import Mail
 import os
-from config import CONFIG_OBJ
+from website.config import CONFIG_OBJ
 
 db = SQLAlchemy()
 mail = Mail()

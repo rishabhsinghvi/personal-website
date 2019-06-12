@@ -37,23 +37,9 @@ anime.timeline()
     }).add({
       targets: '.scrolldown-container',
       opacity: [0, 1],
-      translateY: "3vh"
+      translateY: "3vh",
+      loop:true,
+      direction: 'alternate'
     });
 
-    $(function(){
-      $('.form-submit').click(function(){
-        $.ajax({
-          url: "/validate_and_send",
-          data: $('form').serialize(),
-          type: 'POST',
-          success: function(response){
-            console.log(response)
-          },
-          error: function(err)
-          {
-            console.log(err)
-          }
-
-        });
-      });
-    });
+   

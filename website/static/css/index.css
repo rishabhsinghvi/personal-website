@@ -1,7 +1,7 @@
 html, body {
     height: 100%;
-    background-color: #efea62;
-    background-color: #5cdb95;
+    /*background-color: #efea62;
+    background-color: #5cdb95;*/
     background-color: #ceca5a;
     margin: 0px;
     padding: 0px;   
@@ -68,23 +68,35 @@ html, body {
 
   .current-info-slide{
     width: 100vw;
-    height: 100vh; 
+    height: 100vh;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #000;
   }
+  
   
   .current-info-slide .current-data{
     position:relative;
     top: 5vh;
     float:left;
-    background-color: #ffffff;
+    background: #fff;
     width: 50vw;
     height: 25vh;
     border-radius: 10px 10px 100px 10px;
+    
+  }
+
+  h4{
+    text-decoration: underline;
+  }
+
+  .current-info-slide p{
+    margin: 0px;
   }
   
   .current-info-slide .current-read{
     position: relative;
     top: 35vh;
-    background-color: #ffffff;
+    background:#fff;
     float: right;
     width: 50vw;
     height: 25vh;
@@ -95,7 +107,7 @@ html, body {
   .current-info-slide .current-music{
     position: relative;
     top: 40vh;
-    background-color: #ffffff;
+    background: #fff;
     float: left;
     width: 50vw;
     height: 25vh;
@@ -161,9 +173,6 @@ html, body {
   height: 25vh;
 }
 
-.form-submit{
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
-}
 .form-submit:hover{
   background: linear-gradient(135deg, #6e8efb, #a777e3);
   color: #ffffff;
