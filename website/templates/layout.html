@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
     
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141896761-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-141896761-1');
+    </script>
+
     <link rel="icon" href="{{ url_for('static', filename='img/favicon/favicon16.png') }}" sizes="16x16">
     <link rel="icon" href="{{ url_for('static', filename='img/favicon/favicon32.png') }}" sizes="32x32">
 
@@ -19,9 +30,7 @@
     
     <script src="{{url_for('static', filename='js/lib/aos.js')}}"></script>
 
-    
-
-</html>
+</head>
 
 <!-- Layout isn't strictly necessary, but good idea if I ever want to extend this application in the future -->
 <body>
@@ -40,3 +49,4 @@
     </script>
     
 </body>
+</head>

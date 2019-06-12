@@ -1,6 +1,6 @@
 from website import db
 
-class Message(db.Model):
+class DB_Message(db.Model):
     m_id = db.Column(db.Integer, primary_key = True)
     m_name = db.Column(db.String(20), nullable = False)
     m_email = db.Column(db.String(100), nullable = False)
