@@ -10,7 +10,7 @@ var height = window.innerHeight
 
 
 $('.text-intro .letters').each(function(){
-    $(this).html($(this).text().replace(/([^\x00-\x80]|\w|,|')/g, "<span class='letter'>$&</span>"));
+    $(this).html($(this).text().replace(/([^\x00-\x80]|\w|,|'|\.)/g, "<span class='letter'>$&</span>"));
   });
   
 anime.timeline()
@@ -24,16 +24,36 @@ anime.timeline()
       }
     })
     .add({
-      targets: links,
+      targets: [links, '.des-container'],
       translateX: [-width, 0],
       delay: function(el, i, t){
-        return i*100;
+        return i*50;
       },
       endDelay: function(el, i, t)
       {
         return (t-i)*100;
       },
       duration: 2000
+    }).add({
+      targets: '.scrolldown-container',
+      opacity: [0, 1],
+      translateY: "3vh"
     });
 
-  
+    $(function(){
+      $('.form-submit').click(function(){
+        $.ajax({
+          url: "/validate_and_send",
+          data: $('form').serialize(),
+          type: 'POST',
+          success: function(response){
+            console.log(response)
+          },
+          error: function(err)
+          {
+            console.log(err)
+          }
+
+        });
+      });
+    });

@@ -14,7 +14,11 @@
 
     <link href="https://fonts.googleapis.com/css?family=Neucha|Open+Sans+Condensed:300|Special+Elite&display=swap" rel="stylesheet">
 
-    <link href="{{url_for('static', filename='css/index.css')}}" rel="stylesheet">
+    <link href="{{css}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/lib/aos.css')}}" rel="stylesheet">
+    
+    <script src="{{url_for('static', filename='js/lib/aos.js')}}"></script>
+
     
 
 </html>
@@ -25,9 +29,14 @@
 
     <script src="{{url_for('static', filename='js/lib/jquery-3.4.1.min.js')}}"></script>
     <script src="{{url_for('static', filename='js/lib/anime.min.js')}}"></script>
-    <script src="{{url_for('static', filename='js/lib/aos.js')}}"></script>
     <script src="{{url_for('static', filename='js/lib/parsley.min.js')}}"></script>
-    <script src="{{url_for('static', filename='js/home.js')}}"></script>
-
+    <script src="{{jsfile}}"></script>
+    
+    <script>
+            AOS.init();
+            function scrollTo(position) {
+                $('body').animate({scrollTop: position}, 500);
+            }
+    </script>
     
 </body>

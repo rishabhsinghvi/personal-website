@@ -1,17 +1,23 @@
 html, body {
     height: 100%;
     background-color: #efea62;
-    background-color: #4eafd7;
+    background-color: #5cdb95;
     background-color: #ceca5a;
-    overflow:  hidden;
+    margin: 0px;
+    padding: 0px;   
 }
 
+.splash-slide{
+  height: 100vh;
+  width: 100vh;
+  overflow-x: hidden;
+}
 
 .text-intro {
     position: relative;
     font-weight: 900;
     font-size: 4em;
-    top: 25vh;
+    top: 15vh;
     font-family: 'Neucha', cursive;
     color: #ffffff;
   }
@@ -30,9 +36,17 @@ html, body {
     line-height: 1em;
   }
 
+  .des-container{
+    position:relative;
+    top: 15vh;
+    font-family: 'Neucha', cursive;
+    color: #ffffff;
+    font-size: 1.5em;
+  }
+
   .link-container{
     position:relative;
-    top: 35vh;
+    top: 25vh;
   }
   
   .ext_link {
@@ -47,7 +61,111 @@ html, body {
 
   .scrolldown-container{
     position:relative;
-    top: 65vh;
+    top: 45vh;
+  }
+
+
+
+  .current-info-slide{
+    width: 100vw;
+    height: 100vh; 
+  }
+  
+  .current-info-slide .current-data{
+    position:relative;
+    top: 5vh;
+    float:left;
+    background-color: #ffffff;
+    width: 50vw;
+    height: 25vh;
+    border-radius: 10px 10px 100px 10px;
+  }
+  
+  .current-info-slide .current-read{
+    position: relative;
+    top: 35vh;
+    background-color: #ffffff;
+    float: right;
+    width: 50vw;
+    height: 25vh;
+    border-radius: 10px 10px 10px 100px;
   }
 
   
+  .current-info-slide .current-music{
+    position: relative;
+    top: 40vh;
+    background-color: #ffffff;
+    float: left;
+    width: 50vw;
+    height: 25vh;
+    border-radius: 10px 10px 100px 10px;
+  }
+
+  .contact-slide{
+    color: #ffffff;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .contact-logo-wrapper{
+    height: 100%;
+    width: 50vw;
+    float: left;
+  }
+
+
+  .contact-logo-wrapper img{
+    position: relative;
+    left: 15vw;
+    height: 60%;
+    width: 60%;
+  }
+
+  .form-wrapper{
+    position: relative;
+    float:right;
+    width: 50vw;
+    top: 10vh;
+    height: 80vh;
+  }
+
+  .form-wrapper h1{
+    font-family: 'Neucha', cursive;
+  }
+  .form-input{
+    position: relative;
+    top: 2vh;
+  }
+
+.form-wrapper input, textarea, button{
+  
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin: 10px;
+  width: 40%;
+  border-radius: 4px;
+  border: none;
+  box-shadow: none;
+  background: none;
+  background-color:#ffffff;
+  font-size: 1.2em;
+}
+
+.form-wrapper input{
+
+  height: 5vh;
+  border-radius: 20px;
+}
+
+.form-wrapper textarea{
+  height: 25vh;
+}
+
+.form-submit{
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+}
+.form-submit:hover{
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: #ffffff;
+}
+

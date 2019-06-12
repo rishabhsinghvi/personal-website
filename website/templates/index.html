@@ -2,37 +2,123 @@
 {% block body %}
 
 <center>
-<h1 class="text-intro">
+<div class="splash-slide">
+    <h1 class="text-intro">
         <span class="text-wrapper">
-        <span class="letters">Hi, I'm Rishabh</span>
+        <span class="letters">Hi, I'm Rishabh.</span>
         </span>
-</h1>
-<div class="link-container">
-        <span class="ext_link">
-        <a href="https://www.github.com/rishabhsinghvi" target="_blank">
-            <img src="{{ url_for('static', filename='img/logos/github-logo.svg') }}" title="Github">
-        </a>
-        </span>
-        <span class="ext_link">
-        <a  href="https://www.linkedin.com/in/rishabhsinghvi2" target="_blank">
-            <img src="{{ url_for('static', filename='img/logos/linkedin-logo.svg') }}" title="LinkedIn">
-        </a>
-        </span>
-        <span class="ext_link">
-        <a  href="https://www.twitter.com/_lieability_" target="_blank">
-            <img src="{{ url_for('static', filename='img/logos/twitter-logo.svg') }}" title="Twitter">
-        </a>
+    </h1>
+
+    <div class ="des-container">
+        <span class="des-wrapper">
+            <p>I'm currently an international student studying Computer Engineering at UMass Amherst, with a minor in Economics. My interests lie towards artificial neural networks, specifically recurrent neural networks and LSTMs, and game engine architecture, specifically decision making in AI agents. Check out my Github or leave me a message!</p>
         </span>
     </div>
 
-<div class="scrolldown-container">
-    <span class="scrolldown">
-        <img id="scrolldown-svg" src = "{{ url_for('static', filename='img/logos/scrolldown.svg') }}">
-    </span>
-</div>
+    <div class="link-container">
+        <span class="ext_link">
+            <a href="https://www.github.com/rishabhsinghvi" target="_blank">
+                <img src="{{ url_for('static', filename='img/logos/github-logo.svg') }}" title="Github">
+            </a>
+        </span>
+        <span class="ext_link">
+            <a  href="https://www.linkedin.com/in/rishabhsinghvi2" target="_blank">
+                <img src="{{ url_for('static', filename='img/logos/linkedin-logo.svg') }}" title="LinkedIn">
+            </a>
+        </span>
+        <span class="ext_link">
+            <a  href="https://www.twitter.com/_lieability_" target="_blank">
+                <img src="{{ url_for('static', filename='img/logos/twitter-logo.svg') }}" title="Twitter">
+            </a>
+        </span>
+    </div>
 
+    <div class="scrolldown-container">
+        <span class="scrolldown">
+            <img id="scrolldown-svg" src = "{{ url_for('static', filename='img/logos/scrolldown.svg') }}">
+        </span>
+    </div>
+
+</div>
 
 </center>
 
+<center>
+<div class="current-info-slide">
+    <div class="current-data" data-aos="fade-right" data-aos-duration="1000"></div>
+    <div class="current-read" data-aos="fade-left" data-aos-duration="1000"></div>
+    <div class="current-music" data-aos="fade-right" data-aos-duration="1000"></div>
+</div>
 
+</center>
+<div class="contact-slide" id="contact-slide">
+
+    <div class="contact-logo-wrapper">
+        <div class="paper-plane-wrapper" data-aos="fade-up-right" data-aos-duration="2000">
+            <img src="{{url_for('static', filename='img/paper-plane.svg')}}" >
+        </div>
+        
+    </div>
+
+    <div class="form-wrapper" data-aos="fade-left" data-aos-duration="2000">
+        <center>
+            <h1>Send me a message!</h1>
+            
+        <div class="form-input">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+    
+            <div class="form-field">
+                {% if form.m_name.errors %}
+                    {{form.m_name(placeholder="Name", class="form-name", id="form-name")}}
+                    <div class="invalid-span">
+                        {% for err in form.m_name.errors %}
+                        <span style="color:#fff; font-size: 1em;">{{ err }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{form.m_name(placeholder="Name", class="form-name", id="form-name")}}
+                {% endif %}
+            </div>
+            
+            <div class="form-field">
+                    {% if form.m_email.errors %}
+                    {{form.m_email(placeholder="Email", class="form-email", id="form-email")}}
+                    <div class="invalid-span">
+                        {% for err in form.m_email.errors %}
+                        <span style="color:#fff; font-size: 1em;">{{ err }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{form.m_email(placeholder="Email", class="form-email", id="form-email")}}
+                {% endif %}
+            </div>
+
+            
+            <div class="form-field">
+                    {% if form.m_msg.errors %}
+                    {{form.m_msg(placeholder="Message", class="form-msg", id="form-msg")}}
+                    <div class="invalid-span">
+                        {% for err in form.m_msg.errors %}
+                        <span style="color:#fff; font-size: 1em;">{{ err }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{form.m_msg(placeholder="Message", class="form-msg", id="form-msg")}}
+                {% endif %}
+            </div>
+
+                
+            <div class="form-field">
+                    {{form.m_sub(placeholder="Send message", class="form-submit")}}
+            </div>
+        </form>
+    </div>
+        </center>
+    </div>
+
+</div>
+
+
+<!-- <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
 {% endblock body %}
