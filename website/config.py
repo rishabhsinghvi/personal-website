@@ -2,7 +2,7 @@ import os
 from website.utils import MAIL_PORT, MAIL_SERVER, MAIL_TLS
 
 class CONFIG_OBJ:
-    DEBUG = True
+    DEBUG = False
     SECRET_KEY = os.environ.get('WEB_SECRET_KEY')
     SQLALCHEMY_DATABASE_URI = os.environ.get('WEB_SQL_DB_PATH')
     MAIL_SERVER = MAIL_SERVER
