@@ -8,7 +8,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'UA-141896761-1');
     </script>
 
@@ -23,30 +22,47 @@
     <meta name="description" content="My personal website. Source code available on Github">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css?family=Neucha|Open+Sans+Condensed:300|Special+Elite&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Raleway&display=swap" rel="stylesheet">
 
-    <link href="{{css}}" rel="stylesheet">
-    <link href="{{url_for('static', filename='css/lib/aos.css')}}" rel="stylesheet">
+    {% block head %}
+    {% endblock head %}
     
-    <script src="{{url_for('static', filename='js/lib/aos.js')}}"></script>
 
 </head>
 
 <!-- Layout isn't strictly necessary, but good idea if I ever want to extend this application in the future -->
 <body>
+        <div class="name-banner">
+                <h1 class="h1-name-banner">
+                    <a href="/">
+                    rishabh.
+                </a>
+                </h1>
+            </div>
+            
+            <div class="link-banner">
+                <span class="ext_link">
+                    <a href="https://www.github.com/rishabhsinghvi" target="_blank">
+                        <img src="{{ url_for('static', filename='img/logos/github-logo.svg') }}" onmouseover="this.src='{{ url_for('static', filename = 'img/logos/github-logo-hover.svg') }}';" onmouseout="this.src='{{ url_for('static', filename = 'img/logos/github-logo.svg') }}';"   title="Github">
+                    </a>
+                </span>
+            
+                <span class="ext_link">
+                    <a  href="https://www.linkedin.com/in/rishabhsinghvi2" target="_blank">
+                        <img src="{{ url_for('static', filename='img/logos/linkedin-logo.svg') }}" onmouseover="this.src='{{ url_for('static', filename = 'img/logos/linkedin-logo-hover.svg') }}';" onmouseout="this.src='{{ url_for('static', filename = 'img/logos/linkedin-logo.svg') }}';" title="LinkedIn">
+                    </a>
+                </span>
+            
+                <span class="ext_link">
+                    <a  href="https://www.twitter.com/_lieability_" target="_blank">
+                        <img src="{{ url_for('static', filename='img/logos/twitter-logo.svg') }}" onmouseover="this.src='{{ url_for('static', filename = 'img/logos/twitter-logo-hover.svg') }}';" onmouseout="this.src='{{ url_for('static', filename = 'img/logos/twitter-logo.svg') }}';" title="Twitter">
+                    </a>
+                </span>
+            </div>
+            
+            
     {% block body %}{% endblock body %}
 
-    <script src="{{url_for('static', filename='js/lib/jquery-3.4.1.min.js')}}"></script>
-    <script src="{{url_for('static', filename='js/lib/anime.min.js')}}"></script>
-    <script src="{{url_for('static', filename='js/lib/parsley.min.js')}}"></script>
-    <script src="{{jsfile}}"></script>
-    
-    <script>
-            AOS.init();
-            function scrollTo(position) {
-                $('body').animate({scrollTop: position}, 500);
-            }
-    </script>
-    
 </body>
 </head>

@@ -1,180 +1,103 @@
-html, body {
-    height: 100%;
-    /*background-color: #efea62;
-    background-color: #5cdb95;*/
-    background-color: #ceca5a;
-    margin: 0px;
-    padding: 0px;   
+body{
+  font-family: 'Raleway', sans-serif;
+  color: #ffffff;
+  background-color: #393f4d;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
 }
 
-.splash-slide{
-  height: 100vh;
-  width: 100vh;
-  overflow-x: hidden;
-}
-
-.text-intro {
-    position: relative;
-    font-weight: 900;
-    font-size: 4em;
-    top: 15vh;
-    font-family: 'Neucha', cursive;
-    color: #ffffff;
-  }
-  
-  .text-intro .text-wrapper {
-    position: relative;
-    display: inline-block;
-    padding-top: 0.2em;
-    padding-right: 0.05em;
-    padding-bottom: 0.1em;
-    overflow: hidden;
-  }
-  
-  .text-intro .letter {
-    display: inline-block;
-    line-height: 1em;
-  }
-
-  .des-container{
-    position:relative;
-    top: 15vh;
-    font-family: 'Neucha', cursive;
-    color: #ffffff;
-    font-size: 1.5em;
-  }
-
-  .link-container{
-    position:relative;
-    top: 25vh;
-  }
-  
-  .ext_link {
-    position: relative;
-    display: inline-block;
-  }
-
-  .link-container a{
-    margin: 20px;
-    text-decoration: none;
-  }
-
-  .scrolldown-container{
-    position:relative;
-    top: 45vh;
-  }
-
-
-
-  .current-info-slide{
-    width: 100vw;
-    height: 100vh;
-    font-family: 'Open Sans Condensed', sans-serif;
-    color: #000;
-  }
-  
-  
-  .current-info-slide .current-data{
-    position:relative;
-    top: 5vh;
-    float:left;
-    background: #fff;
-    width: 50vw;
-    height: 25vh;
-    border-radius: 10px 10px 100px 10px;
-    
-  }
-
-  h4{
-    text-decoration: underline;
-  }
-
-  .current-info-slide p{
-    margin: 0px;
-  }
-  
-  .current-info-slide .current-read{
-    position: relative;
-    top: 35vh;
-    background:#fff;
-    float: right;
-    width: 50vw;
-    height: 25vh;
-    border-radius: 10px 10px 10px 100px;
-  }
-
-  
-  .current-info-slide .current-music{
-    position: relative;
-    top: 40vh;
-    background: #fff;
-    float: left;
-    width: 50vw;
-    height: 25vh;
-    border-radius: 10px 10px 100px 10px;
-  }
-
-  .contact-slide{
-    color: #ffffff;
-    height: 100vh;
-    width: 100vw;
-  }
-
-  .contact-logo-wrapper{
-    height: 100%;
-    width: 50vw;
-    float: left;
-  }
-
-
-  .contact-logo-wrapper img{
-    position: relative;
-    left: 15vw;
-    height: 60%;
-    width: 60%;
-  }
-
-  .form-wrapper{
-    position: relative;
-    float:right;
-    width: 50vw;
-    top: 10vh;
-    height: 80vh;
-  }
-
-  .form-wrapper h1{
-    font-family: 'Neucha', cursive;
-  }
-  .form-input{
-    position: relative;
-    top: 2vh;
-  }
-
-.form-wrapper input, textarea, button{
-  
-  font-family: 'Open Sans Condensed', sans-serif;
-  margin: 10px;
-  width: 40%;
-  border-radius: 4px;
-  border: none;
-  box-shadow: none;
-  background: none;
-  background-color:#ffffff;
-  font-size: 1.2em;
-}
-
-.form-wrapper input{
-
+.name-banner{
+  margin: 0px;
+  padding: 0px;
   height: 5vh;
-  border-radius: 20px;
 }
 
-.form-wrapper textarea{
-  height: 25vh;
+.h1-name-banner{
+  font-size: 2em;
+  position: relative;
+  left: 6vw;
+  top: 1vh;
 }
 
-.form-submit:hover{
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
+.h1-name-banner a{
+  text-decoration: none;
+  color: white;
+}
+
+.link-banner{
+  margin: 0px;
+  padding: 0px;
+  height: 5vh;
+  width: 15vw;
+  float: right;
+  position: relative;
+  bottom: 5vh;
+  right: 0vh;
+}
+
+.ext_link{
+  padding: 1vw;
+  position: relative;
+  top: 2vh;
+}
+
+.title-container{
+  position: relative;
+  /*background-color: green;
+  */
+  height: 50vh;
+  width: 40vw;
+  top: 20vh;
+  left: 10vw; 
+  font-size: 10em;
+}
+
+.img-container{
+  position:relative;
+  top: 10vh;
+  left: 10vw;
+}
+
+
+.text-container{
+  position:relative;
+  bottom: 55vh;
+  left: 50vw;
+  width: 40vw;
+  font-size: 1.5em;
+  overflow-wrap: break-word;
+}
+
+.text-container a{
   color: #ffffff;
 }
+
+.contact-text
+{
+  position: relative;
+  bottom: 5vh;
+}
+
+.image-container{
+  position: relative;
+  left: 10vw;
+}
+
+.header-text{
+  font-size: 2em;
+}
+
+.draw-canvas{
+  position: relative;
+  bottom: 40vh;
+  left: 50vw;
+  font-family: 'Raleway', sans-serif;
+}
+
+.draw-canvas a{
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 

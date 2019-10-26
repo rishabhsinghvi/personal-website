@@ -35,7 +35,19 @@ def index():
     return render_template('index.html', form=form, css=url_for('static', filename='css/index.css'), jsfile=url_for('static', filename='js/home.js')) 
 
 
-@app.route('/msgsent')
-def msg_sent():
-    return render_template('msgsent.html', css=url_for('static', filename='css/msgsent.css'), jsfile=url_for('static', filename="js/msgsent.js"))
+@app.route('/about', methods=['GET'])
+@app.route('/about.html', methods=['GET'])
+def about():
+    return render_template('about.html')
 
+
+@app.route('/skills', methods=['GET'])
+@app.route('/skills.html', methods=['GET'])
+def skills():
+    return render_template('skills.html')
+
+
+@app.route('/contact', methods=['GET'])
+@app.route('/contact.html', methods=['GET'])
+def contact():
+    return render_template('contact.html')
