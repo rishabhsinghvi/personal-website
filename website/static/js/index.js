@@ -6,7 +6,7 @@ function renderCanvas(canvas)
     ctx.canvas.width = window.innerWidth * 0.4;
     ctx.canvas.height = window.innerHeight * 0.7;
 
-    var drawElement = function(id, c_x, c_y, radius, text)
+    var drawElement = function(id, c_x, c_y, radius, text, text_size, text_center_x, text_center_y, vel_x, vel_y)
     {
         this.id = id;
         this.c_x = c_x;
@@ -14,17 +14,28 @@ function renderCanvas(canvas)
         this.radius = radius;
         this.hover = false;
         this.text = text;
+        this.text_size = text_size;
+        this.text_center_x = text_center_x;
+        this.text_center_y = text_center_y;
+        this.scale = 1.0;
     }
 
     drawElement.prototype.draw = function(){
-        var scale = this.hover ? 1.5: 1;
-        var radius = this.radius * scale;
+        var toScale = this.hover;
+        if(toScale && this.scale < 1.5)
+            this.scale = this.scale + 0.1;
+        else if(!toScale && this.scale > 1.0)
+            this.scale = this.scale - 0.1;
+
+        var radius = this.radius * this.scale;
         ctx.fillStyle = "#feda6a";
         ctx.beginPath();
         ctx.arc(this.c_x, this.c_y, radius, 0, Math.PI*2, false);
         ctx.fill();
         ctx.fillStyle = "#ffffff";
-        ctx.fillText(this.text, this.c_x, this.c_y);
+        ctx.font = this.text_size + ' Raleway';
+        ctx.fillText(this.text, this.text_center_x, this.text_center_y);
+
     }
 
     drawElement.prototype.hovering = function(x, y){
@@ -47,6 +58,15 @@ function renderCanvas(canvas)
         for(var i = 0; i < this.drawElements.length; i++)
         {
             this.drawElements[i].draw();
+        }
+
+        ctx.strokeStyle = "#feda6a";
+        for(var i = 0; i < this.drawElements.length; i++)
+        {
+            ctx.beginPath();
+            ctx.moveTo(this.drawElements[i].c_x, this.drawElements[i].c_y);
+            ctx.lineTo(this.drawElements[(i + 1) % this.drawElements.length].c_x,this.drawElements[(i + 1) % this.drawElements.length].c_y);
+            ctx.stroke();            
         }
     }
 
@@ -71,9 +91,9 @@ function renderCanvas(canvas)
     }
 
     var board = new Board(ctx);
-    var element1 = new drawElement(1, 150 ,150 , 60, "About");
-    var element2 = new drawElement(2, 500, 300, 45, "Contact");
-    var element3 = new drawElement(3, 300, 450, 60, "Skills");
+    var element1 = new drawElement(1, 300 ,150 , 70, "About", '20pt', 265, 155);
+    var element2 = new drawElement(2, 650, 300, 60, "Contact", '15pt', 617, 305);
+    var element3 = new drawElement(3, 450, 450, 80, "Skills", '20pt', 420, 460);
 
     board.addDrawElement(element1);
     board.addDrawElement(element2);

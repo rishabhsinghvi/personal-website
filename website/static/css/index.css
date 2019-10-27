@@ -25,6 +25,11 @@ body{
   color: white;
 }
 
+.h1-name-banner a:hover{
+  text-decoration: none;
+  color: #feda6a;
+}
+
 .link-banner{
   margin: 0px;
   padding: 0px;

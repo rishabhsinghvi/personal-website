@@ -1,0 +1,146 @@
+.lang-container{
+    position: relative;
+    top: 10vh;
+    left: 2vw;
+    font-size: 1.14em;
+}
+
+
+.lang-header
+{
+    font-size: 1.5em;
+}
+
+
+.skill-bar
+{
+    display: inline-block;
+    position: relative;
+    left: 1vw;
+    color: red;
+    background-color: #fff;
+    height: 1vh;
+    width: 15vw;
+    border-radius: 20px;
+}
+
+
+.to-anim
+{
+    border-radius: 20px;
+    width: 0%;
+    height: 100%;
+    background-color: #feda6a;
+}
+
+#skill-bar-cpp
+{
+    position: relative;
+    left: 4vw;
+}
+
+#skill-bar-python
+{
+    position: relative;
+    left: 2.35vw;
+}
+
+#skill-bar-c
+{
+    position: relative;
+    left: 4.8vw;
+}
+
+#skill-bar-js
+{
+    position: relative;
+    left: 1.1vw;
+}
+
+#skill-bar-java
+{
+    position: relative;
+    left: 3.5vw;
+}
+
+#skill-bar-mysql
+{
+    position: relative;
+    left: 2.3vw;
+}
+
+.misc-container
+{
+    position: relative;
+    top: 15vh;
+    left: 2vw;
+}
+
+#skill-bar-flask
+{
+    position: relative;
+    left: 3.5vw;
+}
+
+#skill-bar-opengl
+{
+    position: relative;
+    left: 2.35vw;
+}
+
+#skill-bar-tensorflow
+{
+    position: relative;
+    left: 1.32vw;
+}
+
+#skill-bar-numpy
+{
+    position: relative;
+    left: 2.7vw;
+}
+
+#skill-bar-pandas
+{
+    position: relative;
+    left: 2.7vw;
+}
+
+#skill-bar-vue
+{
+    position: relative;
+    left: 3.3vw;
+}
+
+.other-container{
+    position: relative;
+    top: 20vh;
+    left: 2vw;
+}
+
+.current-container{
+    position: relative;
+    bottom: 43vh;
+    left: 35vw;
+}
+
+
+.current-container a{
+    color: #ffffff;
+}
+
+.read-container{
+    position: relative;
+    bottom: 35vh;
+    left: 35vw;
+}
+
+.project-container{
+    position: relative;
+    bottom: 86vh;
+    left: 75vw;
+}
+
+.project-container a{
+    color: #ffffff;
+}
