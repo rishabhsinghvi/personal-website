@@ -59,15 +59,6 @@ function renderCanvas(canvas)
         {
             this.drawElements[i].draw();
         }
-
-        ctx.strokeStyle = "#feda6a";
-        for(var i = 0; i < this.drawElements.length; i++)
-        {
-            ctx.beginPath();
-            ctx.moveTo(this.drawElements[i].c_x, this.drawElements[i].c_y);
-            ctx.lineTo(this.drawElements[(i + 1) % this.drawElements.length].c_x,this.drawElements[(i + 1) % this.drawElements.length].c_y);
-            ctx.stroke();            
-        }
     }
 
 
