@@ -1,0 +1,48 @@
+body{
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    background-color: #393f4d;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+  }
+  
+  .name-banner{
+    margin: 0px;
+    padding: 0px;
+    height: 5vh;
+  }
+  
+  .h1-name-banner{
+    font-size: 2em;
+    position: absolute;
+    left: 6%;
+    top: 1%;
+  }
+  
+  .h1-name-banner a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .h1-name-banner a:hover{
+    text-decoration: none;
+    color: #feda6a;
+  }
+  
+  .link-banner{
+    margin: 0px;
+    padding: 0px;
+    height: 5%;
+    width: 15%;
+    float: right;
+    position: absolute;
+    bottom: 94%;
+    right: 0%;
+  }
+  
+  .ext_link{
+    position: relative;
+    padding: 8%;
+    top: 55%;
+  }

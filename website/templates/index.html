@@ -7,8 +7,15 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
 
-                
+        
 <script>
+    function resizeCanvas()
+    {
+        var c = document.getElementById('draw-canvas');
+        c.width = window.innerWidth / 2;
+        c.height = window.innerHeight / 2;
+    }
+
     document.addEventListener('DOMContentLoaded', function(event){
         var options = {
         strings: ['Hi, I\'m <br /> Rishabh.'],
@@ -25,6 +32,8 @@
     
 </script>
 
+<link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
+
 {% endblock head %}
 
 
@@ -36,7 +45,7 @@
     <span class="title"></span>
 </div>
 
-<canvas class="draw-canvas" id="draw-canvas">
+<canvas class="draw-canvas" id="draw-canvas" onload="resizeCanvas()">
     <a href="/about">About Me</a>
     <a href="/skills">Skills</a>
     <a href="/contact">Get In Touch!</a>

@@ -1,8 +1,9 @@
 .lang-container{
-    position: relative;
-    top: 10vh;
-    left: 2vw;
+    position: absolute;
+    top: 20%;
+    left: 2%;
     font-size: 1.14em;
+    width: 50%;
 }
 
 
@@ -15,12 +16,12 @@
 .skill-bar
 {
     display: inline-block;
-    position: relative;
+    position: absolute;
     left: 1vw;
     color: red;
     background-color: #fff;
     height: 1vh;
-    width: 15vw;
+    width: 20%;
     border-radius: 20px;
 }
 
@@ -35,93 +36,107 @@
 
 #skill-bar-cpp
 {
-    position: relative;
-    left: 4vw;
+    position: absolute;
+    left: 11.4%;
+    top: 32%;
 }
 
 #skill-bar-python
 {
-    position: relative;
-    left: 2.35vw;
+    position: absolute;
+    left: 11.4%;
+    top: 43%;
 }
 
 #skill-bar-c
 {
-    position: relative;
-    left: 4.8vw;
+    position: absolute;
+    left: 11.4%;
+    top: 55%;
 }
 
 #skill-bar-js
 {
-    position: relative;
-    left: 1.1vw;
+    position: absolute;
+    left: 11.4%;
+    top: 67%;
 }
 
 #skill-bar-java
 {
-    position: relative;
-    left: 3.5vw;
+    position: absolute;
+    left: 11.4%;
+    top: 80%;
 }
 
 #skill-bar-mysql
 {
-    position: relative;
-    left: 2.3vw;
+    position: absolute;
+    left: 11.4%;
+    top: 92%;
 }
 
 .misc-container
 {
-    position: relative;
-    top: 15vh;
-    left: 2vw;
+    position: absolute;
+    top: 45%;
+    left: 2%;
+    width: 50%;
+    font-size: 1.14em;
 }
 
 #skill-bar-flask
 {
-    position: relative;
-    left: 3.5vw;
+    position: absolute;
+    left: 11.4%;
+    top: 32%;
 }
 
 #skill-bar-opengl
 {
-    position: relative;
-    left: 2.35vw;
+    position: absolute;
+    left: 11.4%;
+    top: 43%;
 }
 
 #skill-bar-tensorflow
 {
-    position: relative;
-    left: 1.32vw;
+    position: absolute;
+    left: 11.4%;
+    top: 55%;
 }
 
 #skill-bar-numpy
 {
-    position: relative;
-    left: 2.7vw;
+    position: absolute;
+    left: 11.4%;
+    top: 67%;
 }
 
 #skill-bar-pandas
 {
-    position: relative;
-    left: 2.7vw;
+    position: absolute;
+    left: 11.4%;
+    top: 80%;
 }
 
 #skill-bar-vue
 {
-    position: relative;
-    left: 3.3vw;
+    position: absolute;
+    left: 11.4%;
+    top: 92%;
 }
 
 .other-container{
-    position: relative;
-    top: 20vh;
+    position: absolute;
+    top: 70%;
     left: 2vw;
 }
 
 .current-container{
-    position: relative;
-    bottom: 43vh;
-    left: 35vw;
+    position: absolute;
+    bottom: 60%;
+    left: 35%;
 }
 
 
@@ -130,15 +145,15 @@
 }
 
 .read-container{
-    position: relative;
-    bottom: 35vh;
-    left: 35vw;
+    position: absolute;
+    bottom: 30%;
+    left: 35%;
 }
 
 .project-container{
-    position: relative;
-    bottom: 86vh;
-    left: 75vw;
+    position: absolute;
+    bottom: 75%;
+    left: 75%;
 }
 
 .project-container a{

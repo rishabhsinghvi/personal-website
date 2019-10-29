@@ -1,103 +1,22 @@
-body{
-  font-family: 'Raleway', sans-serif;
-  color: #ffffff;
-  background-color: #393f4d;
-  margin: 0px;
-  padding: 0px;
-  overflow: hidden;
-}
 
-.name-banner{
-  margin: 0px;
-  padding: 0px;
-  height: 5vh;
-}
-
-.h1-name-banner{
-  font-size: 2em;
-  position: relative;
-  left: 6vw;
-  top: 1vh;
-}
-
-.h1-name-banner a{
-  text-decoration: none;
-  color: white;
-}
-
-.h1-name-banner a:hover{
-  text-decoration: none;
-  color: #feda6a;
-}
-
-.link-banner{
-  margin: 0px;
-  padding: 0px;
-  height: 5vh;
-  width: 15vw;
-  float: right;
-  position: relative;
-  bottom: 5vh;
-  right: 0vh;
-}
-
-.ext_link{
-  padding: 1vw;
-  position: relative;
-  top: 2vh;
-}
 
 .title-container{
-  position: relative;
+  position: absolute;
   /*background-color: green;
   */
-  height: 50vh;
-  width: 40vw;
-  top: 20vh;
-  left: 10vw; 
+  height: 50%;
+  width: 40%;
+  top: 30%;
+  left: 10%; 
   font-size: 10em;
 }
 
-.img-container{
-  position:relative;
-  top: 10vh;
-  left: 10vw;
-}
-
-
-.text-container{
-  position:relative;
-  bottom: 55vh;
-  left: 50vw;
-  width: 40vw;
-  font-size: 1.5em;
-  overflow-wrap: break-word;
-}
-
-.text-container a{
-  color: #ffffff;
-}
-
-.contact-text
-{
-  position: relative;
-  bottom: 5vh;
-}
-
-.image-container{
-  position: relative;
-  left: 10vw;
-}
-
-.header-text{
-  font-size: 2em;
-}
-
 .draw-canvas{
-  position: relative;
-  bottom: 40vh;
-  left: 50vw;
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
   font-family: 'Raleway', sans-serif;
+  font-size: 2em;
 }
 
 .draw-canvas a{

@@ -1,4 +1,11 @@
 {% extends "layout.html" %}
+
+{% block head %}
+
+<link href="{{ url_for('static', filename='css/contact.css') }}" rel="stylesheet">
+
+{% endblock head %}
+
 {% block body %}
 
 <div class="image-container">
@@ -6,7 +13,7 @@
         <img src=" {{ url_for('static', filename='img/paper-plane.svg') }} ">
     </span>
 </div>
-<div class="text-container">
+<div class="text-container" id ="contact-container">
     <span class="contact-text">
         <span class="header-text">Get in touch!</span> <br /><br />
         You can email me at: rdpsinghvi@gmail.com <br /> <br />
