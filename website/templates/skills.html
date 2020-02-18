@@ -7,8 +7,12 @@
 
 {% block body %}
 
-<div class="lang-container">
-    <span class="lang-header">Languages</span><br /><br />
+<div class="container">
+<div class="row">
+<div class="lang-container four columns">
+    <center>
+    <span class="lang-header">Programming Languages</span><br /><br />
+</center>
     <span class="lang-text">C++</span>
     <div class="skill-bar" id="skill-bar-cpp"><div class="to-anim" id="cpp"></div></div>
     <br />
@@ -26,16 +30,21 @@
     <br />
     <span class="lang-text">MySQL</span>
     <div class="skill-bar" id="skill-bar-mysql"><div class="to-anim" id="mysql"></div> </div>
+
 </div>
 
+<div class="misc-container four columns">
+    <center>
+    <span class="lang-header">Other Frameworks and APIs</span><br /><br />
+</center>
 
-<div class="misc-container">
-    <span class="lang-header">Miscellaneous</span><br /><br />
+    <span class="lang-text">OpenGL</span>
+        <div class="skill-bar" id="skill-bar-opengl"><div class="to-anim" id="opengl"></div></div>
+    <br />
+
+
     <span class="lang-text">Flask</span>
     <div class="skill-bar" id="skill-bar-flask"><div class="to-anim" id="flask"></div></div>
-    <br />
-    <span class="lang-text">OpenGL</span>
-    <div class="skill-bar" id="skill-bar-opengl"><div class="to-anim" id="opengl"></div></div>
     <br />
     <span class="lang-text">Tensorflow</span>
     <div class="skill-bar" id="skill-bar-tensorflow"><div class="to-anim" id="tensorflow"></div></div>
@@ -51,41 +60,60 @@
     <br />
 </div>
 
-<div class="other-container">
+<div class="other-container four columns">
+    <center>
     <span class="lang-header">Other</span><br /><br />
+</center>
+    <span class="lang-text">GLSL Shader Programming</span> <br />
+    <span class="lang-text">Git</span><br />
+    <span class="lang-text">CMake, premake</span><br />
     <span class="lang-text">Linux/Unix Programming</span><br />
     <span class="lang-text">Artificial Neural Networks</span> <br />
     <span class="lang-text">Hardware Accelerated Rendering</span> <br />
     <span class="lang-text">Networking/Client-Server Architecture</span> <br />
-    <span class="lang-text">Shader Programming</span> <br />
     <span class="lang-text">Operating Systems</span>
 </div>
-
-<div class="current-container">
-    <span class="lang-header">What I'm Doing Right Now</span><br /><br />
-    <span class="lang-text">I'm in my final year of undergraduate studies at UMass Amherst.</span><br /><br />
-    <span class="lang-text">I'm currently working as an Undergraduate Research Assistant</span><br />
-    <span class="lang-text">at the Biologicall Inspired Neural and Dynamical Systems (BINDS) Lab.</span><br /><br />
-    <span class="lang-text">I'm working on developing recurrent neural nets that are able to re-create</span><br />
-    <span class="lang-text"> pitch accurate renditions of Bach cantatas.</span><br />
-    <span class="lang-text">The project is also the subject of my Honors Thesis.</span>
 </div>
 
-<div class="read-container">
+
+<div class="row">
+
+    
+<div class="project-container four columns">
+    <center>
+    <span class="lang-header">My Projects</span><br /><br />
+</center>
+    <span class="lang-text">A full list of my projects can be found on <a href="www.github.com/rishabhsinghvi/" target="_blank"><u>Github</u>.</a></span>
+    
+</div>
+</div>
+
+
+
+<div class="current-container four columns">
+    <center>
+    <span class="lang-header">What I'm Doing Right Now</span><br /><br />
+</center>
+    <span class="lang-text">I'm in my final year of undergraduate studies at UMass Amherst.</span><br /><br />
+    <span class="lang-text">I was working as an Undergraduate Research Assistant</span><br />
+    <span class="lang-text">at the Biologicall Inspired Neural and Dynamical Systems (BINDS) Lab.</span><br /><br />
+    <span class="lang-text">I was working on developing recurrent neural nets that are able to re-create</span>
+    <span class="lang-text"> pitch accurate renditions of Bach cantatas, using reservoir architecture and LSTMs.</span><br /><br />
+    <span class="lang-text">My senior project involves designing and implementing a secure electronic voting machine system, called Democrasafe.</span>
+
+</div>
+
+<div class="read-container four columns">
+    <center>
         <span class="lang-header">What I'm Reading Right Now</span><br /><br />
+    </center>
         <span class="lang-text">The Elements of Statistical Learning - Trevor Hastie, et al.</span><br /><br />
         <span class="lang-text">Between the Lines - My Autobiography: Michael Carrick</span><br /><br />
         <span class="lang-text">The Road to Middle-Earth: Tom Shippey</span><br /><br />
         <span class="lang-text">Game Engine Architecture: Jason Gregory</span><br /><br />
 </div>
 
-<div class="project-container">
-    <span class="lang-header">My Projects</span><br /><br />
-    <span class="lang-text">A full list of my projects can be found on <a href="www.github.com/rishabhsinghvi/" target="_blank">Github.</a></span>
 </div>
-
-
-
 
 <script src = "{{ url_for('static', filename = 'js/skills.js') }}"></script>
 {% endblock body %}

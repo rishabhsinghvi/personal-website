@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141896761-1"></script>
     <script>
@@ -20,8 +21,10 @@
     <meta name="author" content="Rishabh Singhvi: https://github.com/rishabhsinghvi   https://www.linkedin.com/in/rishabhsinghvi2">
     <meta name="keywords" content="personal website, Rishabh, Singhvi, Rishabh Singhvi">
     <meta name="description" content="My personal website. Source code available on Github">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link href="{{ url_for('static', filename='css/normalize.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/skeleton.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/layout.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Raleway&display=swap" rel="stylesheet">
 
@@ -32,36 +35,67 @@
 </head>
 
 <body>
-        <div class="name-banner">
-                <h1 class="h1-name-banner">
+    <div class="section-header">
+        <div class="container">
+            <div class="row">
+                <div class="six columns nav-bar-title">
+                    <center>
                     <a href="/">
-                    rishabh.
-                </a>
-                </h1>
-            </div>
-            
-            <div class="link-banner">
-                <span class="ext_link">
-                    <a href="https://www.github.com/rishabhsinghvi" target="_blank">
-                        <img src="{{ url_for('static', filename='img/logos/github-logo.svg') }}" onmouseover="this.src='{{ url_for('static', filename = 'img/logos/github-logo-hover.svg') }}';" onmouseout="this.src='{{ url_for('static', filename = 'img/logos/github-logo.svg') }}';"   title="Github">
+                        <h3>rishabh.</h3>
                     </a>
-                </span>
-            
-                <span class="ext_link">
-                    <a  href="https://www.linkedin.com/in/rishabhsinghvi2" target="_blank">
-                        <img src="{{ url_for('static', filename='img/logos/linkedin-logo.svg') }}" onmouseover="this.src='{{ url_for('static', filename = 'img/logos/linkedin-logo-hover.svg') }}';" onmouseout="this.src='{{ url_for('static', filename = 'img/logos/linkedin-logo.svg') }}';" title="LinkedIn">
-                    </a>
-                </span>
-            
-                <span class="ext_link">
-                    <a  href="https://www.twitter.com/_lieability_" target="_blank">
-                        <img src="{{ url_for('static', filename='img/logos/twitter-logo.svg') }}" onmouseover="this.src='{{ url_for('static', filename = 'img/logos/twitter-logo-hover.svg') }}';" onmouseout="this.src='{{ url_for('static', filename = 'img/logos/twitter-logo.svg') }}';" title="Twitter">
-                    </a>
-                </span>
-            </div>
-            
-            
-    {% block body %}{% endblock body %}
+                    </center>
+                </div>
 
+                <div class="six columns nav-bar-links">
+                <center>
+                    <span class="ext_link">
+                        <a href="https://www.github.com/rishabhsinghvi" target="_blank">
+                            <img src="{{ url_for('static', filename='img/logos/github-logo.svg') }}" onmouseover="this.src='{{ url_for('static', filename = 'img/logos/github-logo-hover.svg') }}';" onmouseout="this.src='{{ url_for('static', filename = 'img/logos/github-logo.svg') }}';"   title="Github">
+                        </a>
+                    </span>
+                
+
+                    <span class="ext_link">
+                        <a  href="https://www.linkedin.com/in/rishabhsinghvi2" target="_blank">
+                            <img src="{{ url_for('static', filename='img/logos/linkedin-logo.svg') }}" onmouseover="this.src='{{ url_for('static', filename = 'img/logos/linkedin-logo-hover.svg') }}';" onmouseout="this.src='{{ url_for('static', filename = 'img/logos/linkedin-logo.svg') }}';" title="LinkedIn">
+                        </a>
+                    </span>
+                
+
+                
+                    <span class="ext_link">
+                        <a  href="https://www.twitter.com/_lieability_" target="_blank">
+                            <img src="{{ url_for('static', filename='img/logos/twitter-logo.svg') }}" onmouseover="this.src='{{ url_for('static', filename = 'img/logos/twitter-logo-hover.svg') }}';" onmouseout="this.src='{{ url_for('static', filename = 'img/logos/twitter-logo.svg') }}';" title="Twitter">
+                        </a>
+                    </span>
+
+                    <span class="nav-button ext_link">
+                        <div id="nav-check">
+                        <input type="checkbox" id="check"/>
+                            <label for="check">
+                            <svg viewBox="0 0 30 30" width="30" height="30">
+                                <path id="one" d="M4 10h22M4" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
+                                <path id="two" d="M4 20h22M4" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
+                            </svg>
+                        </label>
+                        </div>
+                    </span>
+                    <!--<aside>
+                        <ul>
+                            <li>Hello</li>
+                        </ul>
+                    </aside>
+                -->
+                </center>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    
+
+
+    {% block body %}{% endblock body %}
 </body>
 </head>

@@ -1,15 +1,17 @@
 .img-container{
-    position:absolute;
-    top: 20%;
-    left: 10%;
+    position: relative;
+    top: 6rem;
+    width: 100%;
+  }
+
+  .img-container img{
+    width: 100%;
+    height: auto;
   }
   
   .text-container{
-    position:absolute;
-    bottom: 20%;
-    left: 50%;
-    width: 40%;
-    font-size: 1.5em;
+    position: relative;
+    top: 6rem;
     overflow-wrap: break-word;
   }
   

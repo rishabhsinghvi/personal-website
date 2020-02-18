@@ -9,16 +9,9 @@
 
         
 <script>
-    function resizeCanvas()
-    {
-        var c = document.getElementById('draw-canvas');
-        c.width = window.innerWidth / 2;
-        c.height = window.innerHeight / 2;
-    }
-
     document.addEventListener('DOMContentLoaded', function(event){
         var options = {
-        strings: ['Hi, I\'m <br /> Rishabh.'],
+        strings: ['Hi, I\'m Rishabh.'],
         typeSpeed: 60,
         loop: false,
         onComplete: (self) => {
@@ -26,7 +19,7 @@
         }
         };
 
-    var typed = new Typed(".title-container .title", options);
+    var typed = new Typed(".title", options);
     
     }); 
     
@@ -40,16 +33,11 @@
 {% block body %}
 
 
-
-<div class="title-container">
-    <span class="title"></span>
+<div class="container">
+    <div class="title-container row">
+    <span class="twelve columns"><center><h2 class="title"></h2></center></span>
+</div>
 </div>
 
-<canvas class="draw-canvas" id="draw-canvas" onload="resizeCanvas()">
-    <a href="/about">About Me</a>
-    <a href="/skills">Skills</a>
-    <a href="/contact">Get In Touch!</a>
-</canvas>
 
-<script src = "{{ url_for('static', filename='js/index.js') }}"></script>
 {% endblock body %}

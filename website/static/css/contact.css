@@ -1,35 +1,21 @@
-
-  .text-container{
-    position:absolute;
-    bottom: 20%;
-    left: 50%;
-    width: 40%;
-    font-size: 1.5em;
-    overflow-wrap: break-word;
-  }
-  
-  .text-container a{
-    color: #ffffff;
-  }
-
-
-.contact-text
-{
+.text-container{
   position: relative;
-  bottom: 5vh;
+  top: 10rem;
+  font-size: 3rem;
+}
+
+.info-container{
+  position: relative;
+  top: 10rem;
 }
 
 .image-container{
-  position: absolute;
-  left: 10%;
+  position: relative;
+  bottom: 10rem;
+  width: 100%;
 }
 
-#contact-container{
-  position: absolute;
-  left: 50%;
-  bottom: 35%;
-}
-
-.header-text{
-  font-size: 2em;
+.image-container img{
+  width: 100%;
+  height: auto;
 }
