@@ -18,3 +18,76 @@
   .text-container a{
     color: #ffffff;
   }
+
+  @media (min-width: 550px)
+  {
+    .img-container{
+      position: relative;
+      top: 6rem;
+      left: 12rem;
+      width: 100%;
+    }
+  
+    .img-container img{
+      width: 100%;
+      height: auto;
+    }
+    
+    
+  .text-container{
+    font-size: 2rem;
+    position: relative;
+    right: 10rem;
+    top: 35rem;
+    overflow-wrap: break-word;
+  }
+  }
+
+  @media (min-width: 600px)
+  {
+    .img-container{
+      position: relative;
+      top: 6rem;
+      left: 12rem;
+      width: 100%;
+    }
+  
+    .img-container img{
+      width: 100%;
+      height: auto;
+    }
+    
+    
+  .text-container{
+    font-size: 2rem;
+    position: relative;
+    right: 15rem;
+    top: 35rem;
+    overflow-wrap: break-word;
+  }
+  }
+
+  @media (min-width: 1000px)
+  {
+    .img-container{
+      position: relative;
+      top: 15rem;
+      right: 40rem;
+    }
+  
+    .img-container img{
+      width: 100%;
+      height: auto;
+      position: relative;
+      right: 30rem;
+    }
+    
+    
+  .text-container{
+    font-size: 2rem;
+    position: relative;
+    left: 10rem;
+    top: 10rem;
+    overflow-wrap: break-word;
+  }
+  }

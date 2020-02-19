@@ -2,5 +2,55 @@
 {
   position: relative;
   top: 20rem;
+  width: auto;
+}
+
+
+span{
+  font-size: 10rem;
+}
+
+
+@media (min-width: 550px)
+{
+  .title-container
+{
+  position: relative;
+  top: 30rem;
   width: 100%;
+}
+
+
+
+span{
+  font-size: 10rem;
+}
+
+}
+
+
+@media (min-width: 1000px)
+{
+  .title-container
+{
+  position: relative;
+  top: 30rem;
+  width: 100%;
+}
+
+
+}
+
+
+@media (min-width: 1400px)
+{
+  .title-container
+{
+  position: relative;
+  top: 30rem;
+  font-size: 10rem;
+  width: auto;
+}
+
+
 }

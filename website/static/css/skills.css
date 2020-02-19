@@ -21,6 +21,9 @@
     border-radius: 20px;
 }
 
+.row{
+    position: relative;
+}
 
 .to-anim
 {
@@ -154,4 +157,193 @@
 
 .project-container a{
     color: #ffffff;
+}
+
+
+
+@media (min-width: 550px)
+{
+    .lang-container{
+        position: relative;
+        top: 10rem;
+        right: 5rem;
+        font-size: 1.14em;
+        width: 100%;
+    }
+
+    .lang-header
+    {
+        font-size: 2rem;
+    }
+    
+    .misc-container
+    {
+    position: relative;
+    top: 10rem;
+    right: 20rem;
+    width: 100%;
+    font-size: 1.14em;
+    }
+
+    .other-container{
+        position: relative;
+        top: 10rem;
+        left: 5rem;
+        width: 100%;
+    }
+    
+    .current-container{
+        position: relative;
+        top: 60rem;
+        width: 33%;
+    }
+
+    .project-container{
+        position: relative;
+        top: 10.5rem;
+        right: 5rem;
+    }
+    
+    
+.current-container{
+    position: relative;
+    top: 0rem;
+    left: 28rem;
+    width: 33%;
+}
+
+
+.read-container{
+    position: relative;
+    left: 35rem;
+    bottom: 80rem;
+    width: 33%;
+}
+
+}
+
+
+@media (min-width: 1000px)
+{
+    .lang-container{
+        position: relative;
+        top: 10rem;
+        right: 5rem;
+        font-size: 1.14em;
+        width: 100%;
+    }
+
+    .lang-header
+    {
+        font-size: 2rem;
+    }
+    
+    .misc-container
+    {
+    position: relative;
+    top: 10rem;
+    right: 20rem;
+    width: 100%;
+    font-size: 1.14em;
+    }
+
+    .other-container{
+        position: relative;
+        top: 10rem;
+        left: 5rem;
+        width: 100%;
+    }
+    
+    .current-container{
+        position: relative;
+        top: 60rem;
+        width: 33%;
+    }
+
+    .project-container{
+        position: relative;
+        top: 10.5rem;
+        right: 5rem;
+    }
+    
+    
+.current-container{
+    position: relative;
+    top: 0rem;
+    left: 28rem;
+    width: 33%;
+}
+
+
+.read-container{
+    position: relative;
+    left: 35rem;
+    bottom: 80rem;
+    width: 33%;
+}
+
+}
+
+
+
+
+@media (min-width: 1500px)
+{
+    .lang-container{
+        position: relative;
+        top: 10rem;
+        right: 30rem;
+        font-size: 1.14em;
+        width: 100%;
+    }
+
+    .lang-header
+    {
+        font-size: 2rem;
+    }
+    
+    .misc-container
+    {
+    position: relative;
+    top: 10rem;
+    right: 20rem;
+    width: 100%;
+    font-size: 1.14em;
+    }
+
+    .other-container{
+        position: relative;
+        top: 10rem;
+        left: 25rem;
+        width: 100%;
+    }
+    
+    .current-container{
+        position: relative;
+        top: 60rem;
+        width: 33%;
+    }
+
+    .project-container{
+        position: relative;
+        top: 10.5rem;
+        right: 30rem;
+    }
+    
+    
+.current-container{
+    position: relative;
+    top: 0rem;
+    left: 30rem;
+    width: 33%;
+}
+
+
+.read-container{
+    position: relative;
+    left: 50rem;
+    bottom: 80rem;
+    width: 33%;
+}
+
 }
