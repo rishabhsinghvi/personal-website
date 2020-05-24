@@ -80,7 +80,7 @@ $(document).ready(function() {
   $(function() {
     typed.typed({
       strings: ["Hi, I'm Rishabh."],
-      typeSpeed: 150,
+      typeSpeed: 45,
       loop: false,
     });
   });
