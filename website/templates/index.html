@@ -1,55 +1,382 @@
-{% extends "layout.html" %}
+  {% extends "layout.html" %}
+  
+  {% block head %}
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+  {% endblock head %}
 
-
-{% block head %}
-
-
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-
+  {% block body %}
+  <!-- start section header -->
+  <div id="header" class="home">
+    
+    <div class="container">
+      <div class="header-content">
+        <h1><span class="typed"></span></h1>
+        <p>C++, Python, C.</p>
         
-<script>
-    function resizeCanvas()
-    {
-        var c = document.getElementById('draw-canvas');
-        c.width = window.innerWidth / 2;
-        c.height = window.innerHeight / 2;
-    }
-
-    document.addEventListener('DOMContentLoaded', function(event){
-        var options = {
-        strings: ['Hi, I\'m <br /> Rishabh.'],
-        typeSpeed: 60,
-        loop: false,
-        onComplete: (self) => {
-            //self.cursor.remove()
-        }
-        };
-
-    var typed = new Typed(".title-container .title", options);
-    
-    }); 
-    
-</script>
-
-<link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
-
-{% endblock head %}
+        <ul class="list-unstyled list-social">
+          <li><a href="https://www.twitter.com/_lieability_/" target="_blank"><i class="ion-social-twitter"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/rishabhsinghvi2/" target="_blank"><i class="ion-social-linkedin"></i></a></li>
+          <li><a href="https://www.github.com/rishabhsinghvi/" target="_blank"><i class="ion-social-github"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End section header -->
 
 
-{% block body %}
+  <!-- start section about us -->
+  <div id="about" class="paddsection">
+    <div class="container">
+      <div class="row justify-content-between">
+
+        <div class="col-lg-4 ">
+          <div class="div-img-bg">
+            <div class="about-img">
+              <img src="{{ url_for('static', filename='images/personal-picture.png') }}" class="img-responsive" alt="me">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="about-descr">
+
+            <p class="p-heading">I'm currently a senior at UMass Amherst, majoring in Computer Science and minoring in Economics.</p>
+            <p class="separator">My interests lie in large-scale low latency applications as well as game development, especially rendering engines. I was working in the BINDS Lab at UMass Amherst, researching music generation with reservoir computing and echo state networks.
+              <br /> I also have a keen interest in the financial world, especially the intersection of finance and technology. <br />I'm a Tolkien buff, and you will probably find me re-reading his works.</p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end section about us -->
 
 
+  <!-- start section services -->
+  <div id="services">
+    <div class="container">
 
-<div class="title-container">
-    <span class="title"></span>
-</div>
+        <div class="services-carousel owl-theme">
 
-<canvas class="draw-canvas" id="draw-canvas" onload="resizeCanvas()">
-    <a href="/about">About Me</a>
-    <a href="/skills">Skills</a>
-    <a href="/contact">Get In Touch!</a>
-</canvas>
+          <div class="services-block">
 
-<script src = "{{ url_for('static', filename='js/index.js') }}"></script>
+            <!-- <i data-icon="ion-ios-browsers-outline"></i> -->
+            <i class="ion-ios-lightbulb-outline"></i>
+            <span>C++</span>
+            <p class="separator">C++11, C++14, C++17 <br/>STL, Boost, CUDA</p>
+
+          </div>
+
+          <div class="services-block">
+
+            <i class="ion-ios-lightbulb-outline"></i>
+            <span>Python</span>
+            <p class="separator">Python 3 <br /> Tensorflow, scikit-learn, Numpy<br />Pandas, Flask</p>
+
+          </div>
+
+          <div class="services-block">
+
+            <i class="ion-ios-lightbulb-outline"></i>
+            <span>C</span>
+            <p class="separator">C99</p>
+
+          </div>
+
+          <div class="services-block">
+
+            <i class="ion-ios-lightbulb-outline"></i>
+            <span>Javascript</span>
+            <p class="separator">Vue.js, AngularJS, Node.js<br />jQuery</p>
+
+          </div>
+          <div class="services-block">
+
+            <i class="ion-ios-lightbulb-outline"></i>
+            <span>Lua</span>
+            <p class="separator"></p>
+
+          </div>
+
+          
+          <div class="services-block">
+
+            <i class="ion-ios-lightbulb-outline"></i>
+            <span>Databases</span>
+            <p class="separator">MySQL, SQL, SQLite</p>
+
+          </div>
+
+          <div class="services-block">
+
+            <i class="ion-ios-lightbulb-outline"></i>
+            <span>Java</span>
+            <p class="separator"></p>
+
+          </div>
+
+          <div class="services-block">
+
+            <i class="ion-ios-lightbulb-outline"></i>
+            <span>Bash Shell Scripting</span>
+            <p class="separator"></p>
+
+          </div>
+
+          <div class="services-block">
+
+            <i class="ion-ios-analytics-outline"></i>
+            <span>Neural Networks</span>
+            <p class="separator">RNN, LSTMs <br />Reservoir Computing, Echo State Networks</p>
+
+          </div>
+
+          <div class="services-block">
+
+            <i class="icon ion-ios-game-controller-b-outline"></i>
+            <span>Graphics API</span>
+            <p class="separator">OpenGL 4.3, Vulkan, GLSL Shading Language</p>
+
+          </div>
+
+          <div class="services-block">
+
+            <i class="icon ion-ios-game-controller-b-outline"></i>
+            <span>Game Development</span>
+            <p class="separator">Unreal Engine 4, SFML, SDL</p>
+
+          </div>
+
+          <div class="services-block">
+
+            <i class="ion-ios-lightbulb-outline"></i>
+            <span>Miscellaneous</span>
+            <p class="separator">MSVC, GCC, Clang<br />JSON, Git, Docker, Travis-CI</p>
+          </div>
+
+        </div>
+
+    </div>
+
+  </div>
+  <!-- end section services -->
+
+
+  <!-- start section portfolio -->
+  <div id="portfolio" class="text-center paddsection">
+
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Selected Projects</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="portfolio-list">
+
+            <ul class="nav list-unstyled" id="portfolio-flters">
+              <li class="filter filter-active" data-filter=".all"></li>
+              <li class="filter" data-filter=".branding"></li>
+              <li class="filter" data-filter=".mockups"></li>
+              <li class="filter" data-filter=".uikits"></li>
+              <li class="filter" data-filter=".webdesign"></li>
+              <li class="filter" data-filter=".photography"></li>
+            </ul>
+
+          </div>
+
+          <div class="portfolio-container">
+
+            <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign">
+              <a class="popup-img" href="https://www.github.com/rishabhsinghvi/miestas/" target="_blank">
+                <img src="{{ url_for('static', filename='images/portfolio/miestas.png') }}" alt="img">
+                <p class="thumbnail-text">Miestas <br />A City-Building Game built using C++17 and OpenGL</p>
+                
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-thumbnail all mockups uikits photography">
+              <a class="popup-img" href="https://www.github.com/rishabhsinghvi/polygon/" target="_blank">
+                <img src="{{ url_for('static', filename='images/portfolio/polygon.png') }}"  alt="img">
+                <p class="thumbnail-text">Polygon <br />3D Game Engine written in C++17, with OpenGL</p>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding webdesig photographyn">
+              <a class="popup-img" href="https://www.github.com/rishabhsinghvi/quartz/" target="_blank">
+                <img src="{{ url_for('static', filename='images/portfolio/quartz.png') }}" alt="img">
+                <p class="thumbnail-text">Quartz<br />2D Platform written from scratch in C++ and SFML</p>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-thumbnail all mockups webdesign photography">
+              <a class="popup-img" href="https://www.github.com/rishabhsinghvi/quartzleveleditor/" target="_blank">
+                <img src="{{ url_for('static', filename='images/portfolio/quartz_level_editor.png') }}" alt="img">
+                <p class="thumbnail-text">Quartz Level Editor<br />Level Editor for Quartz, with tilemap creation, animator, entity creator</p>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits photography"> 
+              <a class="popup-img" href="https://www.github.com/rishabhsinghvi/personal-webiste/" target="_blank">
+                <img src="{{ url_for('static', filename='images/portfolio/website.png') }}" alt="img">
+                <p class="thumbnail-text">Personal Website<br />Responsive website with backend written in Flask-Python</p>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-thumbnail all mockups uikits webdesign">
+              <a class="popup-img" href="https://www.github.com/rishabhsinghvi/">
+                <img src="{{ url_for('static', filename='images/portfolio/github.png') }}" alt="img">
+                <p class="thumbnail-text">Github <br />A full list of my projects can be found on Github</p>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- End section portfolio -->
+
+
+  <!-- start section journal -->
+  <div id="journal" class="text-left paddsection">
+
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Ramblings</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="journal-block">
+        <div class="row">
+<!-- 
+          <div class="col-lg-4 col-md-6">
+            <div class="journal-info">
+
+              <a href="blog-single.html"><img src="images/blog-post-1.jpg" class="img-responsive" alt="img"></a>
+
+
+              <div class="journal-txt">
+
+                <h4><a href="blog-single.html">SO LETS MAKE THE MOST IS BEAUTIFUL</a></h4>
+                <p class="separator">To an English person, it will seem like simplified English
+                </p>
+
+              </div>
+
+            </div>
+          </div> -->
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- End section journal -->
+
+
+  <!-- start sectoion contact -->
+  <div id="contact" class="paddsection">
+    <div class="container">
+      <div class="contact-block1">
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="contact-contact">
+
+              <h2 class="mb-30">GET IN TOUCH</h2>
+
+              <ul class="contact-details">
+                <li><span>Amherst</span></li>
+                <li><span>Massachusetts, United States</span></li>
+                <li><span>rdpsinghvi@gmail.com</span></li>
+              </ul>
+
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <form action="" method="post" role="form" class="contactForm">
+              {{ form.hidden_tag() }}
+              <div class="row">
+
+                <div id="sendmessage">Your message has been sent. Thank you!</div>
+                <div id="errormessage"></div>
+
+                <div class="col-lg-6">
+                  <div class="form-group contact-block1">
+                  <!-- <div class="form-group contact-block1">
+                    
+                    <input type="text" name="name" class="form-control" id="name" placeholder="{{ form.name.label }}" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                    <div class="validation"></div> -->
+                    {{ form.name }}
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <!-- <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                    <div class="validation"></div> -->
+                    {{ form.email }}
+                  </div>
+                </div>
+
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <!-- <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                    <div class="validation"></div> -->
+                    {{ form.subject }}
+                  </div>
+                </div>
+
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <!-- <textarea class="form-control" name="message" rows="12" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                    <div class="validation"></div> -->
+                    {{ form.message }}
+                  </div>
+                </div>
+
+                <div class="col-lg-12">
+                  <!-- <input type="submit" class="btn btn-defeault btn-send" value="Send message"> -->
+                  {{ form.submit() }}
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- start sectoion contact -->
+
+
+  <!-- start section footer -->
+  <div id="footer" class="text-center">
+    <div class="container">
+      <div class="socials-media text-center">
+
+        <ul class="list-unstyled list-social">
+          <li><a href="https://www.twitter.com/_lieability_/" target="_blank"><i class="ion-social-twitter"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/rishabhsinghvi2/" target="_blank"><i class="ion-social-linkedin"></i></a></li>
+          <li><a href="https://www.github.com/rishabhsinghvi/" target="_blank"><i class="ion-social-github"></i></a></li>
+        </ul>
+
+      </div>
+
+
+      
+
+    </div>
+  </div>
+  <!-- End section footer -->
+
 {% endblock body %}
